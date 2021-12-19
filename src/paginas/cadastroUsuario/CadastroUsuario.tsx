@@ -9,7 +9,7 @@ function CadastroUsuario() {
         <Grid container direction='row' justifyContent='center' alignItems='center' className='background-color'>
             <Grid item xs={12} sm={6} className='imagem2' ></Grid>
             <Grid item xs={12} sm={6} alignItems='center'>
-                <Box paddingX={10}>
+                <Box paddingX={10} paddingBottom={20}>
                     <form>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastre-se</Typography>
 

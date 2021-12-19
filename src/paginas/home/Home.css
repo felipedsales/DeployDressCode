@@ -1,5 +1,5 @@
 .caixa{
-    background-color:#ECD5BB !important;
+    background-color:#f2f2f2 !important;
     width: 100vh;
     min-height: 100vh;
 }
@@ -10,7 +10,7 @@
 .titulo{
     color: black !important;
     -webkit-text-stroke-color: #1E1514;
-    font-size: 3em;
+    font-size: 2em !important;
 }
 
 .botao{

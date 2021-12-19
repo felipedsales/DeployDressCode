@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
-import { Container, Typography, TextField, Button } from "@material-ui/core"
+import { Container, Typography, TextField, Button, Grid, Box } from "@material-ui/core"
 import { useHistory, useParams } from 'react-router-dom'
 import './CadastroCategoria.css';
 import { buscaId, post, put } from '../../../services/Service';
@@ -17,7 +17,7 @@ function CadastroCategoria() {
     );
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
-        categoria:'',
+        categoria: '',
         descricao: '',
         palavra_chave: '',
         produto: null
@@ -58,7 +58,7 @@ function CadastroCategoria() {
         setCategoria({
             ...categoria,
             [e.target.name]: e.target.value,
-            produto:null
+            produto: null
         })
 
     }
@@ -110,17 +110,19 @@ function CadastroCategoria() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro de categoria</Typography>
-                <TextField value={categoria.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="categoria" label="categoria" variant="outlined" name="categoria" margin="normal" fullWidth />
-                <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                
-                <Button type="submit" variant="contained" color="primary">
-                    Finalizar
-                </Button>
-            </form>
-        </Container>
+        
+            <Container maxWidth="xs" className='topo'  >
+                <form onSubmit={onSubmit}>
+                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro de categoria</Typography>
+                    <TextField value={categoria.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="categoria" label="categoria" variant="outlined" name="categoria" margin="normal" fullWidth />
+                    <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+
+                    <Button type="submit" variant="contained" className='finalizar'>
+                        Finalizar
+                    </Button>
+                </form>
+            </Container>
+      
     )
 }
 

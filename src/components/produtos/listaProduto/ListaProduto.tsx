@@ -36,8 +36,8 @@ function ListaProduto() {
 
     return (
 
-        <Box display="flex" justifyContent="center" flexWrap="wrap">
-            <Grid xs={12} className="caixaProdutos">
+        <Box display="flex" justifyContent="center" flexWrap="wrap" className="back-produtos">
+            <Grid xs={12} >
                 <Box>
                     <img src="https://imgur.com/HzTBdw2.png" alt="" width="100%" />
                 </Box>
@@ -91,14 +91,14 @@ function ListaProduto() {
 
                                     <Link to={`/form-produtos/${post.id}`} className="text-decorator-none" >
                                         <Box mx={1} >
-                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                                            <Button variant="contained" className="marginLeft botao-1" size='small'>
                                                 atualizar
                                             </Button>
                                         </Box>
                                     </Link>
                                     <Link to={`/deletarprodutos/${post.id}`} className="text-decorator-none">
                                         <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary">
+                                            <Button variant="contained" size='small' className='botao-2'>
                                                 deletar
                                             </Button>
                                         </Box>

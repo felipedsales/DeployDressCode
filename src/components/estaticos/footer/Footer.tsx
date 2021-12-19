@@ -1,6 +1,6 @@
 import React from 'react';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { Typography, Box, Grid } from '@material-ui/core';
 import './Footer.css';
 
@@ -19,8 +19,8 @@ function Footer() {
                             <a href="https://www.instagram.com/dresscodemarketplace/" target="_blank">
                                 <InstagramIcon className="redes-footer" />
                             </a>
-                            <a href="" target="_blank">
-                                <LinkedInIcon className="redes-footer" />
+                            <a href="https://github.com/maiurysousa/Projeto_Integrador/tree/task12" target="_blank">
+                                <GitHubIcon className="redes-footer" />
                             </a>
                         </Box>
                     </Box>

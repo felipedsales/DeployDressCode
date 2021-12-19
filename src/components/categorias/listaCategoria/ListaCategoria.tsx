@@ -29,15 +29,8 @@ function ListaCategoria() {
     }, [categorias.length])
 
     return (
-        <Box display="flex" justifyContent="center" flexWrap="wrap">
-            <Box mx={1}>
-            <Link to="/form-categorias">
-                <Button variant="contained" size='small' className="botao-2 " >
-                    cadastro
-                </Button>
-                </Link>
-            </Box>
-
+        <Box display="flex" justifyContent="center" flexWrap="wrap" className='back-categoria'>
+            
             {
                 categorias.map(categoria => (
                     <Box m={2}  >

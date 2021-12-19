@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import "./Navbar.css";
-import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { addToken } from "../../../store/tokens/actions";
 import { toast } from "react-toastify";
 
 function Navbar() {
-    let history = useHistory(); 
+    let history = useHistory();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -19,8 +19,8 @@ function Navbar() {
         toast.info("Usúario Deslogado", {
             position: "top-right",
             autoClose: 2000,
-            hideProgressBar:false,
-            closeOnClick:true,
+            hideProgressBar: false,
+            closeOnClick: true,
             pauseOnHover: false,
             draggable: false,
             theme: "colored",
@@ -32,12 +32,12 @@ function Navbar() {
     const [click, setClick] = useState(false)
     const closeMobileMenu = () => setClick(false);
 
-    var navbarLogo;
+    var navbarLogout;
 
     if (token != "") {
-        navbarLogo = <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
-            <Box  onClick={() => goLogout()}>
-                <Typography className='txticon nav-links'>
+        navbarLogout = <Link to="/login" className="logout" >
+            <Box onClick={() => goLogout()}>
+                <Typography variant="h6" className='logout link'>
                     Logout
                 </Typography>
             </Box>
@@ -45,36 +45,56 @@ function Navbar() {
 
 
     } else {
-        navbarLogo = <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
-            <Box>
-                <Typography className='txticon nav-links'>
-                    Login ou cadastre-se
-                </Typography>
-            </Box>
-        </Link>
+        navbarLogout =
+            <ul className="lista">
+                <li className="login">
+                    <Link to="/login" className="link">
+                        <Typography variant="h6">
+                            Logar
+                        </Typography>
+                    </Link>
+                    <Link to="/cadastrousuario" className="link">
+                        <Typography>
+                            cadastrar
+                        </Typography>
+                    </Link>
+
+                </li>
+
+            </ul>
+
 
     }
 
     return (
         <>
-            <AppBar position="static" className="sobreappbar">
+            <AppBar position="static" className="navbar">
                 <Toolbar variant="dense">
-                    <Box>
-                        <img src="https://imgur.com/YRuuBDW.png" className='imgsobreappbar' />
-                    </Box>
-                    <Box >
-                        <Typography variant="h5" color="inherit" className='txtappbar' >
-                            .dresscode
-                        </Typography>
-                    </Box>
-                    <Box >
-                        <AccountCircleSharpIcon className="accicon" onClick={() => goLogout()} />
-                    </Box>
-                    {navbarLogo}
+                    <ul className="lista">
+                        <li>
+                            <img src="https://imgur.com/YRuuBDW.png" className='logo' />
+                        </li>
+                        <li>
+                            <Typography variant="h5" className='dresscode' >
+                                .dresscode
+                            </Typography>
+                        </li>
+                        <li>
+                            <Box className="accicon">
+                                <AccountCircleIcon  onClick={() => goLogout()} />
+
+                            </Box>
+                        </li>
+                        <li>
+                            {navbarLogout}
+                        </li>
+                    </ul>
+
+
                 </Toolbar>
             </AppBar>
 
-            
+
         </>
     )
 }

@@ -39,7 +39,7 @@ function Home() {
                 </Grid>
 
                 <Grid xs={2} sm={2} className="aligncenter">
-                    <Typography variant="h3" component="h3" align="center" className="titulo">Destaques da Semana</Typography>
+                    <Typography variant="h3" component="h4" align="center" className="titulo">Destaques da Semana</Typography>
 
                 </Grid>
 

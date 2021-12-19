@@ -10,7 +10,7 @@
 }
 
 .textfield{
-    border: 3px solid #1E1514 !important;
+    
     background-color: #fff !important;   
 }
 
@@ -32,7 +32,7 @@
 }
 
 .imagem{
-    background-image: url("https://i.imgur.com/e6yyGWd.jpg");
+    background-image: url("https://i.imgur.com/GgZYiow.jpg");
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
