@@ -18,10 +18,6 @@ function Sobre() {
             </Grid>
             <Grid alignItems="center" item xs={12} sm={12} >
 
-
-
-
-
                 <Typography variant="body2" component="p" align="center" className="texto-manifesto">
                     Apoiamos iniciativas que oferecem roupas de qualidade
                     produzidas de forma empática e responsável transformando a vida de todos envolvidos na cadeia produtiva -  da obtenção de matéria prima ao
@@ -40,11 +36,12 @@ function Sobre() {
                 <Typography variant="body2" component="p" align="center" className="texto-manifesto">
                     Cada linha que compõe o tecido das roupas que vestimos tem sua importância e incentivando o uso roupas sem gênero que vestem todos os tipos
                     de corpos, realçamos cada traço que nos compõem, valorizando cada curva do nosso corpo, cada desvio de nossa história.
+                    
+                    
                 </Typography>
-                <Typography variant="body2" component="p" align="center" className="texto-manifesto dresscode">
-                    Somos Dresscode
+                <Typography variant="body2" component="p" align="center" className="texto-manifesto dresscodetxt">
+                    Somos Dresscode.
                 </Typography>
-
 
             </Grid>
 
