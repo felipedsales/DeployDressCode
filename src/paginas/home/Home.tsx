@@ -6,6 +6,8 @@ import "./Home.css";
 import CarouselComponent from "../../components/carousel/CarouselComponent";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
+import ListaProduto from "../../components/produtos/listaProduto/ListaProduto";
+import ListaProdutoHome from "../../components/produtos/listaProdutoHome/ListaProdutoHome";
 
 
 
@@ -76,10 +78,28 @@ function Home() {
                 <Box border={1} className="dest">
                     <Box justifyContent="center" display="flex">
                         <img src="https://i.imgur.com/iOu178R.png" alt="" className="card-home" />
-                    </Box>
-                    
-                    
+                    </Box>        
                 </Box>
+
+                <Grid xs={5} sm={5} className="img">
+                    <img src="https://i.imgur.com/0oqcguC.png" alt="" className="img" />
+
+                </Grid>
+
+                <Grid xs={2} sm={2} className="aligncenter">
+                    <Typography variant="h3" component="h4" align="center" className="titulo">Produtos</Typography>
+
+                </Grid>
+
+
+                <Grid xs={5} sm={5} className="img">
+                    <img src="https://i.imgur.com/0oqcguC.png" alt="" className="img" />
+
+                </Grid>
+
+                <Box className="lista-produto">
+                        <ListaProdutoHome />
+                    </Box>
 
             </Grid>
         </>

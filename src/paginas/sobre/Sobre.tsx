@@ -36,8 +36,8 @@ function Sobre() {
                 <Typography variant="body2" component="p" align="center" className="texto-manifesto">
                     Cada linha que compõe o tecido das roupas que vestimos tem sua importância e incentivando o uso roupas sem gênero que vestem todos os tipos
                     de corpos, realçamos cada traço que nos compõem, valorizando cada curva do nosso corpo, cada desvio de nossa história.
-                    
-                    
+
+
                 </Typography>
                 <Typography variant="body2" component="p" align="center" className="texto-manifesto dresscodetxt">
                     Somos Dresscode.
@@ -69,9 +69,11 @@ function Sobre() {
                     Maiury Sousa
                 </Typography>
                 <Typography variant="body2" component="p" align="center" className="pitch-autor">
-                    Formada em Artes Visuais, me encontro hoje em uma transição de carreira tendo participado
-                    do Bootcamp da Generation Brasil que teve como foco o desenvolvimento web com o uso da linguagem
-                    Java para back-end e bibliotecas do React para front-end, além de desenvolver minhas Soft Skills.
+                    Cursei Artes Visuais e hoje me encontro aqui, formada pela Generation Brasil como
+                    desenvolvedora web Jr com foco na linguagem Java e utilização de bibliotecas React.
+                    Desenvolvendo minhas Soft Skills percebi que proatividade e trabalho em equipe são meu ponto forte
+                    e acredito terem sido de extrema importância para a realização da dresscode onde também pude confirmar
+                    a grande afinidade que venho tendo com o front-end colaborando muito para a estilização do site.
                 </Typography>
                 <Box display="flex" justifyContent="center">
                     <a href="https://github.com/maiurysousa" target="_blank">

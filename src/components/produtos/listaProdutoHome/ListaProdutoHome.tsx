@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import Produto from '../../../models/Produto';
 import { busca } from '../../../services/Service'
 import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
-import './ListaProduto.css';
+import './ListaProdutoHome.css';
 import { useHistory } from 'react-router-dom'
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 
 
-function ListaProduto() {
+function ListaProdutoHome() {
     const [produtos, setProdutos] = useState<Produto[]>([])
     let history = useHistory();
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -37,31 +37,12 @@ function ListaProduto() {
     return (
 
         <Box display="flex" justifyContent="center" flexWrap="wrap" className="back-produtos">
-            <Grid xs={12} >
-                <Box>
-                    <img src="https://imgur.com/HzTBdw2.png" alt="" width="100%" />
-                </Box>
-            </Grid>
 
-            <Grid xs={5} sm={5} className="img">
-                <img src="https://i.imgur.com/0oqcguC.png" alt="" className="img" />
-
-            </Grid>
-
-            <Grid xs={2} sm={2} className="padding" >
-                <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="aligncenterProdutos">Produtos</Typography>
-
-            </Grid>
-
-            <Grid xs={5} sm={5} className="img">
-                <img src="https://i.imgur.com/0oqcguC.png" alt="" className="img" />
-
-            </Grid>
             {
                 produtos.map(post => (
-                    <Box m={2} width="30%" display="flex">
+                    <Box m={2} width="22%" display="flex">
                         <Card variant="outlined">
-                            <img src={post.foto} alt="" />
+                            <img src={post.foto} alt="" className="imgs" />
                             <CardContent>
                                 <Typography color="textSecondary" gutterBottom>
                                     Produtos
@@ -95,21 +76,7 @@ function ListaProduto() {
                                             </Button>
                                         </Box>
                                     </Link>
-                                    <Link to={`/form-produtos/${post.id}`} className="text-decorator-none" >
-                                        <Box mx={1} >
-                                            <Button variant="contained" className="marginLeft botao-1" size='small'>
-                                                atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                    <Link to={`/deletarprodutos/${post.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' className='botao-2'>
-                                                deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
- 
+                                    
                                 </Box>
                             </CardActions>
                         </Card>
@@ -121,4 +88,4 @@ function ListaProduto() {
     )
 }
 
-export default ListaProduto;
+export default ListaProdutoHome;
